@@ -1,6 +1,8 @@
 ---
 - name: Ensure dependency is installed (Ubuntu).
-  apt: name=apt-transport-https state=present
+  apt:
+    name: apt-transport-https
+    state: present
 
 - name: Add Elasticsearch apt key.
   apt_key:
