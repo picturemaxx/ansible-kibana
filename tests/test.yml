@@ -3,11 +3,15 @@
 
   pre_tasks:
     - name: Update apt cache.
-      apt: update_cache=yes cache_valid_time=600
+      apt:
+        update_cache: yes
+        cache_valid_time: 600
       when: ansible_os_family == 'Debian'
 
     - name: Install test dependencies.
-      package: name=curl state=present
+      package:
+        name: curl
+        state: present
 
   roles:
     - role_under_test
