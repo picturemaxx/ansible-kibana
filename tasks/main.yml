@@ -14,11 +14,12 @@
   service:
     name: kibana
     state: started
+    enabled: yes
 
 - name: Copy Kibana configuration.
   template:
     src: kibana.yml.j2
-    dest: "/opt/kibana/config/kibana.yml"
+    dest: "/etc/kibana/kibana.yml"
     owner: root
     group: root
     mode: 0644
