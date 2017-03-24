@@ -9,6 +9,7 @@
   package:
     name: kibana
     state: present
+    enabled: yes
 
 - name: Ensure Kibana is started and enabled at boot.
   service:
