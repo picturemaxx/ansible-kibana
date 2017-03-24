@@ -9,12 +9,12 @@
   package:
     name: kibana
     state: present
-    enabled: yes
 
 - name: Ensure Kibana is started and enabled at boot.
   service:
     name: kibana
     state: started
+    enabled: yes
 
 - name: Copy Kibana configuration.
   template:
